@@ -7,7 +7,7 @@ import javax.persistence.*;
 
 @Entity
 @Data
-@NoArgsConstructor
+@NoArgsConstructor // criar construtor sem argumentos
 public class Cliente {
 
     @Id
@@ -20,8 +20,7 @@ public class Cliente {
     @Column
     private Integer idade;
 
-    public Cliente(Long id, String cpf, String nome, Integer idade) {
-        this.id = id;
+    public Cliente(String cpf, String nome, Integer idade) {
         this.cpf = cpf;
         this.nome = nome;
         this.idade = idade;
