@@ -19,7 +19,7 @@ public class MscloudgatewayApplication {
 
 	/**
 	 * Objeto
-	 * que cria a ROTA direto para o discovery server (eureka )
+	 * que cria a ROTA direto para o discovery server (eureka  )
 	 * (quando houver uma chamada para localhost:8080/clientes)
 	 * 8080 - porta do gateway
 	 * /clientes - serviço de clientes que o eureka vai descubrir a porta
@@ -30,6 +30,7 @@ public class MscloudgatewayApplication {
 		return builder
 				.routes()
 				.route(r -> r.path("/clientes/**").uri("lb://msclientes")) // rota para clientes usando o nome definido no serviço clientes
+				.route(r -> r.path("/cartoes/**").uri("lb://mscartoes"))
 				.build();
 	}
 }
