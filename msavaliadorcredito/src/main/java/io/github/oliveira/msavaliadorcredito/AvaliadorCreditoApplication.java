@@ -1,17 +1,19 @@
-package io.github.oliveira.mscartoes;
+package io.github.oliveira.msavaliadorcredito;
 
 import org.springframework.amqp.rabbit.annotation.EnableRabbit;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 
 @SpringBootApplication
 @EnableEurekaClient
+@EnableFeignClients
 @EnableRabbit
-public class MscartoesApplication {
+public class AvaliadorCreditoApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(MscartoesApplication.class, args);
+		SpringApplication.run(AvaliadorCreditoApplication.class, args);
 	}
 
 }

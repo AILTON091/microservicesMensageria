@@ -7,6 +7,11 @@ spring:
         locator:
           enabled: true
           lower-case-service-id: true
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://cursoms-eureka-user:T4WvEWLcRxwqCf@localhost:8081/realms/mscurserealm
 
 server:
   port: 8080
